@@ -41,6 +41,7 @@ Requires:	Qt6Gui >= %{qtver}
 Requires:	Qt6Qml >= %{qtver}
 Requires:	Qt6Xml >= %{qtver}
 Requires:	kf6-dirs
+Obsoletes:	kf5-%{kfname} < %{version}
 Suggests:	media-player-info
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -65,6 +66,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	Qt6Core-devel >= %{qtver}
 Requires:	cmake >= 3.16
+Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
