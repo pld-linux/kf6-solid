@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.2
+%define		kdeframever	6.3
 %define		qtver		5.15.2
 %define		kfname		solid
 
 Summary:	Desktop hardware abstraction
 Name:		kf6-%{kfname}
-Version:	6.2.0
+Version:	6.3.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	8cc81a8dd1e5fe7b7f1ff69b1a823d5c
+# Source0-md5:	f55c5d4a7c8ba1d1d6e70283f1297e32
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -41,7 +41,7 @@ Requires:	Qt6Gui >= %{qtver}
 Requires:	Qt6Qml >= %{qtver}
 Requires:	Qt6Xml >= %{qtver}
 Requires:	kf6-dirs
-Obsoletes:	kf5-%{kfname} < %{version}
+#Obsoletes:	kf5-%{kfname} < %{version}
 Suggests:	media-player-info
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -66,7 +66,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	Qt6Core-devel >= %{qtver}
 Requires:	cmake >= 3.16
-Obsoletes:	kf5-%{kfname}-devel < %{version}
+#Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
