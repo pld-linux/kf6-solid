@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		solid
 
 Summary:	Desktop hardware abstraction
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	a52d33129bc96cb0a7637371fe028eae
+# Source0-md5:	2feaf6943968e0fac446fabe562e18fc
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -41,8 +41,8 @@ Requires:	Qt6Gui >= %{qtver}
 Requires:	Qt6Qml >= %{qtver}
 Requires:	Qt6Xml >= %{qtver}
 Requires:	kf6-dirs
-#Obsoletes:	kf5-%{kfname} < %{version}
 Suggests:	media-player-info
+#Obsoletes:	kf5-%{kfname} < %{version}
 %requires_eq_to Qt6Core Qt6Core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -108,7 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.md TODO
 %attr(755,root,root) %{_bindir}/solid-hardware6
 %ghost %{_libdir}/libKF6Solid.so.6
-%attr(755,root,root) %{_libdir}/libKF6Solid.so.*.*
+%{_libdir}/libKF6Solid.so.*.*
 %{_datadir}/qlogging-categories6/solid.categories
 %{_datadir}/qlogging-categories6/solid.renamecategories
 
