@@ -59,6 +59,16 @@ It provides the following features for application developers:
 - Power Management
 - Network Management
 
+%description -l pl.UTF-8
+Solid jest szkieletem integracji urządzeń. Dostarcza sposób
+odpytywania i interakcji ze sprzętem niezależny od systemu
+operacyjnego.
+
+Dostarcza następujące możliwości dla programistów:
+
+- Wykrywanie sprzętu
+- Zarządzanie zużyciem energii
+- Zarządzanie siecią
 
 %package devel
 Summary:	Header files for %{kfname} development
