@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.26
+%define		kdeframever	6.27
 %define		qtver		5.15.2
 %define		kfname		solid
 
 Summary:	Desktop hardware abstraction
 Name:		kf6-%{kfname}
-Version:	6.26.0
+Version:	6.27.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	dc8d2c5864ace71f21fd4283014d9bf1
+# Source0-md5:	f6faa25294da0f9a67a89789d67746f9
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel >= %{qtver}
 BuildRequires:	Qt6Core-devel >= %{qtver}
