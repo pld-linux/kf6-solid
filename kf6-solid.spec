@@ -6,6 +6,7 @@
 %define		kfname		solid
 
 Summary:	Desktop hardware abstraction
+Summary(pl.UTF-8):	Abstrakcja sprzętu dla pulpitu
 Name:		kf6-%{kfname}
 Version:	6.30.0
 Release:	1
@@ -54,18 +55,16 @@ and interacting with hardware independently of the underlying
 operating system.
 
 It provides the following features for application developers:
-
 - Hardware Discovery
 - Power Management
 - Network Management
 
 %description -l pl.UTF-8
-Solid jest szkieletem integracji urządzeń. Dostarcza sposób
+Solid jest szkieletem integracji urządzeń. Udostępnia sposób
 odpytywania i interakcji ze sprzętem niezależny od systemu
 operacyjnego.
 
-Dostarcza następujące możliwości dla programistów:
-
+Dostarcza następujące funkcje dla programistów:
 - Wykrywanie sprzętu
 - Zarządzanie zużyciem energii
 - Zarządzanie siecią
@@ -100,7 +99,6 @@ Pliki nagłówkowe dla programistów używających %{kfname}.
 %ninja_build -C build test
 %endif
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 %ninja_install -C build
@@ -117,8 +115,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md TODO
 %attr(755,root,root) %{_bindir}/solid-hardware6
-%ghost %{_libdir}/libKF6Solid.so.6
 %{_libdir}/libKF6Solid.so.*.*
+%ghost %{_libdir}/libKF6Solid.so.6
 %{_datadir}/qlogging-categories6/solid.categories
 %{_datadir}/qlogging-categories6/solid.renamecategories
 
